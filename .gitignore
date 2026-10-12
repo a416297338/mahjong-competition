@@ -12,9 +12,7 @@ runs/
 
 .build/
 
-# GitHub source publication: model weights are distributed separately.
-*.onnx
-*.pt
+# Additional model checkpoints are excluded unless explicitly published.
 *.pth
 *.ckpt
 

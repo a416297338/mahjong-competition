@@ -16,7 +16,14 @@ r1-17/r1-12/r1-14 概率集成；之后可在局中通过控制请求双向切�
 - **Windows**：Git for Windows（使用 Git Bash）和 Windows PowerShell，运行原生 Windows Python。
 - **Linux**：Bash、Git，以及 `curl` 或 `wget`。
 - **Python 3.12**：`setup.sh` 自动安装 uv、Python 和依赖，默认安装 CPU ONNX Runtime，无需预装 Python、PyTorch 或 CUDA；`bash setup.sh --cuda` 可另装独立 GPU 环境（需要 NVIDIA GPU 和驱动）。可选后处理需要 C++17 编译器（Linux 的 g++，Windows 的 clang++ 及 MSVC Build Tools），在启动前编译。
-- 首次安装依赖需要联网；本仓库只提交源码，ONNX 模型需另行放置并通过 onnx 配置指定路径。模型、私有配置和运行日志均被 Git 忽略。
+- 首次安装依赖需要联网。本仓库通过 Git LFS 提供 historical297.pt 与 r1-12/r1-14/r1-17 三份 ONNX 模型，合计约 975 MB。私有配置和运行日志被 Git 忽略。
+
+克隆前请安装 Git LFS；已有克隆可在仓库目录执行以下命令下载模型：
+
+```bash
+git lfs install
+git lfs pull
+```
 
 Python 依赖由 `requirements.txt` 固定版本，自动安装：
 
