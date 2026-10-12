@@ -1,0 +1,28 @@
+.venv*/
+.tools/
+__pycache__/
+*.py[cod]
+config.local.json
+secrets/
+runs/
+*.log
+.pytest_cache/
+
+.native/
+
+.build/
+
+# GitHub source publication: model weights are distributed separately.
+*.onnx
+*.pt
+*.pth
+*.ckpt
+
+# Local credentials and private configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+MEMORY.md
+memory/
